@@ -1,8 +1,7 @@
 
 resource "aws_db_instance" "my_db" {
   allocated_storage    = 20
-  db_instance_class   = "db.t3.micro"
-  instance_class = 
+  instance_class =      "db.t3.micro"
   engine              = "postgres"
   engine_version      = "13.3"
   identifier          = "my-db-instance"

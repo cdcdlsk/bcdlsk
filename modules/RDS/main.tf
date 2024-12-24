@@ -25,3 +25,10 @@ resource "aws_db_subnet_group" "main" {
   subnet_ids  = [data.aws_subnet.subnet1.id, data.aws_subnet.subnet2.id]
   description = "Main DB subnet group"
 }
+
+
+# יצירת Security Group
+resource "aws_security_group" "db_sg" {
+  name_prefix = "db-sg"
+  vpc_id      = data.aws_vpc.existing.id
+}
